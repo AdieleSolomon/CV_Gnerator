@@ -3,14 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>CV Generator - Professional Resume Builder | SOLOBEXT Design</title>
+    <meta
+      name="title"
+      content="CV Generator - Professional Resume Builder | SOLOBEXT Design" />
     <meta
       name="description"
-      content="Professional CV Generator - Create and download your CV" />
+      content="Create professional CVs with SOLOBEXT Design's CV Generator. Build, preview, and download your resume in PDF and DOCX formats instantly." />
+    <meta
+      name="keywords"
+      content="CV generator, resume builder, professional CV, PDF resume, DOCX resume, CV maker, job application" />
+    <meta name="author" content="SOLOBEXT Design" />
     <meta name="theme-color" content="#041128" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cv-generator.solobext.design" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cv-generator.solobext.design" />
+    <meta
+      property="og:title"
+      content="CV Generator - Professional Resume Builder | SOLOBEXT Design" />
+    <meta
+      property="og:description"
+      content="Create professional CVs with SOLOBEXT Design's CV Generator. Build, preview, and download your resume in PDF and DOCX formats instantly." />
+    <meta
+      property="og:image"
+      content="./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg" />
+    <meta property="og:site_name" content="CV Generator by SOLOBEXT Design" />
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://cv-generator.solobext.design" />
+    <meta
+      property="twitter:title"
+      content="CV Generator - Professional Resume Builder | SOLOBEXT Design" />
+    <meta
+      property="twitter:description"
+      content="Create professional CVs with SOLOBEXT Design's CV Generator. Build, preview, and download your resume in PDF and DOCX formats instantly." />
+    <meta
+      property="twitter:image"
+      content="./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg" />
+
+    <!-- Favicon -->
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>" />
-    <title>CV Generator - Professional CV Builder</title>
+      type="image/jpeg"
+      href="./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg" />
+    <link
+      rel="apple-touch-icon"
+      href="./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg" />
+
+    <!-- Preconnect to external resources for performance -->
+    <link rel="preconnect" href="https://js.paystack.co" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebApplication",
+        "name": "CV Generator by SOLOBEXT Design",
+        "description": "Professional CV/Resume Generator - Create, customize, and download CVs in PDF and DOCX formats",
+        "url": "https://cv-generator.solobext.design",
+        "image": "./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "SOLOBEXT Design",
+          "logo": "./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg"
+        },
+        "featureList": [
+          "CV/Resume Builder",
+          "Real-time Preview",
+          "PDF Download",
+          "DOCX Download",
+          "User Authentication",
+          "Data Persistence",
+          "Responsive Design",
+          "Paystack Payment Integration"
+        ]
+      }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SOLOBEXT Design",
+        "logo": "./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg",
+        "description": "Professional CV and resume generation services",
+        "url": "https://solobext.design",
+        "sameAs": [
+          "https://twitter.com/solobextdesign",
+          "https://facebook.com/solobextdesign",
+          "https://linkedin.com/company/solobext-design"
+        ]
+      }
+    </script>
 
     <!-- Optional: Load config.js if it exists (contains API keys) -->
     <!-- To use: 1) Copy config.example.js to config.js 2) Add your real keys 3) Uncomment line below -->
@@ -82,14 +186,29 @@
       }
 
       .app-header .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
         font-size: 1.4rem;
         font-weight: 700;
         color: var(--secondary);
         letter-spacing: 0.5px;
       }
+      .app-header .logo img {
+        height: 48px;
+        width: auto;
+        object-fit: contain;
+        filter: brightness(1.1);
+      }
+      .app-header .logo .logo-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
       .app-header .logo span {
         color: white;
         font-weight: 300;
+        font-size: 0.85rem;
       }
 
       .app-header .user-area {
@@ -979,7 +1098,18 @@
     <div id="app">
       <!-- ═══════════════ HEADER ═══════════════ -->
       <header class="app-header no-print" id="appHeader">
-        <div class="logo">CV<span>Builder</span></div>
+        <div class="logo">
+          <img
+            src="./SOLOBEXT_DESIGN_logo_recreation_2K_202607271748.jpeg"
+            alt="SOLOBEXT Design - Professional CV Builder Logo"
+            title="SOLOBEXT Design CV Generator" />
+          <div class="logo-text">
+            <span>CV Builder</span>
+            <span style="font-size: 0.7rem; opacity: 0.9"
+              >by Solobext Designs</span
+            >
+          </div>
+        </div>
         <div class="user-area" id="userArea">
           <span class="greeting" id="greetingText"
             >Welcome, <strong>Guest</strong></span

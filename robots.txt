@@ -1,0 +1,33 @@
+# Robots.txt for CV Generator by SOLOBEXT Design
+# This file helps search engines crawl and index your website
+
+User-agent: *
+Allow: /
+Disallow: /config.js
+Disallow: /config.example.js
+Disallow: /.env*
+Disallow: /.git*
+
+# Allow crawling of important resources
+Allow: /index.html
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpeg
+Allow: /*.jpg
+Allow: /*.png
+
+# Specify sitemap location (update URL as needed)
+Sitemap: https://cv-generator.solobext.design/sitemap.xml
+
+# Crawl delay (optional - be respectful)
+# Crawl-delay: 1
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
