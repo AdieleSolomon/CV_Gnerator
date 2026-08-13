@@ -1575,9 +1575,10 @@
         currentView: "auth",
         pinRequests: {}, // email -> { pin, expires }
         // Load Paystack key from config.js if available, otherwise use inline key
-        paystackPublicKey: (typeof CONFIG !== 'undefined' && CONFIG.PAYSTACK_PUBLIC_KEY) 
-          ? CONFIG.PAYSTACK_PUBLIC_KEY 
-          : "pk_live_d1eda80050f4e630b988f9e8cce90775af0c5d7f",
+        paystackPublicKey:
+          typeof CONFIG !== "undefined" && CONFIG.PAYSTACK_PUBLIC_KEY
+            ? CONFIG.PAYSTACK_PUBLIC_KEY
+            : "pk_live_d1eda80050f4e630b988f9e8cce90775af0c5d7f",
       };
 
       // ──────────────────────────────────────────────────────────────

@@ -18,6 +18,7 @@ A professional, feature-rich CV/Resume generator application built with vanilla 
 ## 🚀 Quick Start
 
 ### 1. **Prerequisites**
+
 - Modern web browser (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
 - Paystack account for payment processing
 
@@ -39,6 +40,7 @@ start Solomon-Adiele-CV.html
 ### 3. **Configuration**
 
 #### Option A: Quick Setup (Easiest)
+
 The application comes pre-configured with a live Paystack key. Just open and use!
 
 #### Option B: Use Your Own Paystack Key
@@ -49,12 +51,13 @@ The application comes pre-configured with a live Paystack key. Just open and use
    - Copy your Public Key
 
 2. **Configure in Application**
-   
+
    **Method 1: Edit config.js**
+
    ```bash
    # Copy the example config
    cp config.example.js config.js
-   
+
    # Edit config.js and add your Paystack Public Key
    # Uncomment the config.js line in Solomon-Adiele-CV.html
    ```
@@ -73,6 +76,7 @@ The application comes pre-configured with a live Paystack key. Just open and use
 ### Creating a CV
 
 1. **Open the Application**
+
    ```bash
    # Double-click the HTML file or open in browser
    open Solomon-Adiele-CV.html
@@ -134,26 +138,29 @@ const CONFIG = {
 
 ### Available Options
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `PAYSTACK_PUBLIC_KEY` | String | Your Paystack live public key |
-| `ENVIRONMENT` | String | "development" or "production" |
-| `DEBUG` | Boolean | Enable debug logging in console |
+| Option                | Type    | Description                     |
+| --------------------- | ------- | ------------------------------- |
+| `PAYSTACK_PUBLIC_KEY` | String  | Your Paystack live public key   |
+| `ENVIRONMENT`         | String  | "development" or "production"   |
+| `DEBUG`               | Boolean | Enable debug logging in console |
 
 ## 🔐 Security & Best Practices
 
 ### For Development
+
 - Use `pk_test_*` keys for testing
 - Never commit real API keys to Git
 - Use `.gitignore` to exclude `config.js` and `.env` files
 
 ### For Production
+
 - Use `pk_live_*` keys only
 - Keep secret keys (`sk_*`) secure on backend only
 - This application only uses public keys (safe for frontend)
 - Rotate keys regularly
 
 ### Data Privacy
+
 - All user data is stored locally in browser
 - No data is sent to external servers (except Paystack)
 - Clear browser storage to delete all data
@@ -168,36 +175,44 @@ All dependencies are loaded from CDN (no installation needed):
 
 ## 🌐 Browser Support
 
-| Browser | Minimum Version | Status |
-|---------|-----------------|--------|
-| Chrome | 90+ | ✅ Full Support |
-| Firefox | 88+ | ✅ Full Support |
-| Safari | 14+ | ✅ Full Support |
-| Edge | 90+ | ✅ Full Support |
-| IE 11 | - | ❌ Not Supported |
+| Browser | Minimum Version | Status           |
+| ------- | --------------- | ---------------- |
+| Chrome  | 90+             | ✅ Full Support  |
+| Firefox | 88+             | ✅ Full Support  |
+| Safari  | 14+             | ✅ Full Support  |
+| Edge    | 90+             | ✅ Full Support  |
+| IE 11   | -               | ❌ Not Supported |
 
 ## 🐛 Troubleshooting
 
 ### Issue: Payment feature not working
+
 **Solution:**
+
 - Check browser console (F12) for errors
 - Verify Paystack key is correctly configured
 - Ensure internet connection is active
 
 ### Issue: PDF download fails
+
 **Solution:**
+
 - Try a different browser
 - Clear browser cache
 - Disable browser extensions that might block downloads
 
 ### Issue: Data not saving
+
 **Solution:**
+
 - Check if browser allows localStorage
 - Not available in private/incognito mode
 - Try a different browser
 
 ### Issue: Page loads slowly
+
 **Solution:**
+
 - Check internet connection
 - CDN libraries need to download
 - Disable ad blockers temporarily
@@ -205,6 +220,7 @@ All dependencies are loaded from CDN (no installation needed):
 ## 📝 Changelog
 
 ### v1.0.0 (Current)
+
 - ✅ Initial release
 - ✅ Complete CV builder with form
 - ✅ PDF and DOCX export
