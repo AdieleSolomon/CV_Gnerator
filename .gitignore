@@ -1,0 +1,40 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Node modules (if using npm in future)
+node_modules/
+package-lock.json
+
+# Build and output files
+dist/
+build/
+*.log
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# Local testing files
+local_config.js
+test_keys.js
+
+# Backup files
+*.bak
+*.backup
