@@ -32,9 +32,9 @@ git clone https://github.com/AdieleSolomon/CV_Gnerator.git
 cd CV_Gnerator
 
 # Open in your browser
-open Solomon-Adiele-CV.html
+open index.html
 # or
-start Solomon-Adiele-CV.html
+start index.html
 ```
 
 ### 3. **Configuration**
@@ -59,11 +59,11 @@ The application comes pre-configured with a live Paystack key. Just open and use
    cp config.example.js config.js
 
    # Edit config.js and add your Paystack Public Key
-   # Uncomment the config.js line in Solomon-Adiele-CV.html
+   # Uncomment the config.js line in index.html
    ```
 
    **Method 2: Edit HTML directly**
-   - Open `Solomon-Adiele-CV.html` in a text editor
+   - Open `index.html` in a text editor
    - Find: `paystackPublicKey: "pk_live_..."`
    - Replace with your key
 
@@ -79,7 +79,7 @@ The application comes pre-configured with a live Paystack key. Just open and use
 
    ```bash
    # Double-click the HTML file or open in browser
-   open Solomon-Adiele-CV.html
+   open index.html
    ```
 
 2. **Register or Login**
@@ -112,7 +112,7 @@ The application comes pre-configured with a live Paystack key. Just open and use
 
 ```
 CV_Gnerator/
-├── Solomon-Adiele-CV.html      # Main application (all-in-one HTML file)
+├── index.html                   # Main application (all-in-one HTML file)
 ├── config.example.js            # Example configuration file
 ├── CONFIG.md                    # Configuration guide
 ├── SETUP_INSTRUCTIONS.md        # Detailed setup guide

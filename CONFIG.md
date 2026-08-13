@@ -28,7 +28,7 @@ The application requires a valid Paystack public key to process payments.
 
 3. **Add Keys to the Application**
    - **Option A: Edit HTML directly** (Quick Setup)
-     - Open `Solomon-Adiele-CV.html`
+     - Open `index.html`
      - Find line ~1573: `paystackPublicKey: "pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"`
      - Replace with your actual Paystack public key
    - **Option B: Use Console Command** (Runtime Setup)
@@ -90,7 +90,7 @@ The application uses the following CDN libraries:
 
 ## 🚀 Running the Application
 
-1. Open `Solomon-Adiele-CV.html` in your web browser
+1. Open `index.html` in your web browser
 2. Register or login with your email
 3. Fill in your CV details
 4. Preview your CV

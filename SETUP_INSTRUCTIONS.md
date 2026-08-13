@@ -14,7 +14,7 @@
 
 **Method 1: Direct HTML Edit (Recommended)**
 
-1. Open `Solomon-Adiele-CV.html` in a text editor
+1. Open `index.html` in a text editor
 2. Find this line (around line 1573):
    ```javascript
    paystackPublicKey: "pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -24,7 +24,7 @@
 
 **Method 2: Runtime Configuration**
 
-1. Open `Solomon-Adiele-CV.html` in your browser
+1. Open `index.html` in your browser
 2. Open Developer Console (Press F12)
 3. Paste this command:
    ```javascript
@@ -34,7 +34,7 @@
 
 ### Step 3: Test the Application ✅
 
-1. Open `Solomon-Adiele-CV.html` in your browser
+1. Open `index.html` in your browser
 2. You should see:
    - Login/Register screen
    - Dashboard after login
@@ -79,7 +79,7 @@ You **don't need to install** anything else:
 
 Your CV Generator is now ready. Just:
 
-1. Open `Solomon-Adiele-CV.html` in any browser
+1. Open `index.html` in any browser
 2. Sign up or log in
 3. Start creating your professional CV!
 
