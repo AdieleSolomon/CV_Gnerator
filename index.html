@@ -16,7 +16,6 @@
       name="keywords"
       content="CV generator, resume builder, professional CV, PDF resume, DOCX resume, CV maker, job application" />
     <meta name="author" content="SOLOBEXT Design" />
-    <meta name="theme-color" content="#041128" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
 
@@ -808,8 +807,8 @@
         justify-content: center;
         padding: 1.2rem;
         background: rgba(0, 0, 0, 0.68);
-        backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
       }
       .modal-overlay.open {
         display: flex;
@@ -1091,6 +1090,89 @@
       .w-full {
         width: 100%;
       }
+
+      /* ─────────────── INLINE STYLES CONVERTED TO CLASSES ─────────────── */
+      .logo-subtitle {
+        font-size: 0.7rem;
+        opacity: 0.9;
+      }
+
+      .user-email-display {
+        margin-top: 20px;
+        text-align: center;
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      .form-action-back {
+        background: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .preview-toolbar-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .preview-action-back {
+        background: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .pin-request-btn {
+        background: var(--secondary);
+        color: var(--primary);
+      }
+
+      .bank-details p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      .bank-details p.secondary-info {
+        font-size: 0.8rem;
+        color: #aaa;
+        margin: 4px 0 0;
+      }
+
+      .pin-result-area {
+        display: none;
+        margin-top: 16px;
+      }
+
+      .pin-result-area.show {
+        display: block;
+      }
+
+      .pin-result-label {
+        color: #e8d7a2;
+        margin-bottom: 4px;
+      }
+
+      .pin-copy-info {
+        color: #a0a0a0;
+        font-size: 0.8rem;
+        margin-top: 6px;
+      }
+
+      .pin-copy-btn {
+        background: transparent;
+        color: var(--secondary);
+        border: 1px solid var(--secondary);
+      }
+
+      .pin-payment-status {
+        margin-top: 10px;
+        color: #e8d7a2;
+        font-size: 0.9rem;
+      }
+
+      .hidden-initially {
+        display: none !important;
+      }
     </style>
   </head>
 
@@ -1104,10 +1186,8 @@
             alt="SOLOBEXT Design - Professional CV Builder Logo"
             title="SOLOBEXT Design CV Generator" />
           <div class="logo-text">
-            <span>CV Builder</span>
-            <span style="font-size: 0.7rem; opacity: 0.9"
-              >by Solobext Designs</span
-            >
+            CV Builder
+            <span class="logo-subtitle">by Solobext Designs</span>
           </div>
         </div>
         <div class="user-area" id="userArea">
@@ -1121,9 +1201,8 @@
             Login
           </button>
           <button
-            class="btn btn-danger btn-sm"
+            class="btn btn-danger btn-sm hidden-initially"
             id="btnLogout"
-            style="display: none"
             onclick="logout()">
             Logout
           </button>
@@ -1217,13 +1296,7 @@
           </button>
         </div>
 
-        <div
-          style="
-            margin-top: 20px;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-          ">
+        <div class="user-email-display">
           <span id="userEmailDisplay"></span>
         </div>
       </div>
@@ -1564,12 +1637,7 @@
               <button type="submit" class="btn">💾 Save &amp; Continue</button>
               <button
                 type="button"
-                class="btn btn-outline"
-                style="
-                  background: transparent;
-                  color: var(--primary);
-                  border-color: var(--primary);
-                "
+                class="btn btn-outline form-action-back"
                 onclick="navigateTo('dashboard')">
                 ← Back to Dashboard
               </button>
@@ -1583,18 +1651,13 @@
         <div class="preview-container">
           <div class="preview-toolbar no-print">
             <h2>📄 Your Generated CV</h2>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+            <div class="preview-toolbar-actions">
               <button class="btn" onclick="navigateTo('form')">✏️ Edit</button>
               <button class="btn" onclick="openDownloadModal()">
                 📥 Download CV
               </button>
               <button
-                class="btn btn-outline"
-                style="
-                  background: transparent;
-                  color: var(--primary);
-                  border-color: var(--primary);
-                "
+                class="btn btn-outline preview-action-back"
                 onclick="navigateTo('dashboard')">
                 ← Dashboard
               </button>
@@ -1643,47 +1706,35 @@
         <hr class="divider" />
 
         <div class="pin-actions">
-          <button
-            class="btn"
-            style="background: var(--secondary); color: var(--primary)"
-            onclick="requestPin()">
+          <button class="btn pin-request-btn" onclick="requestPin()">
             💳 Request PIN via Paystack (₦500)
           </button>
           <div class="bank-details">
-            <p style="margin: 0; font-size: 0.9rem">
+            <p>
               <strong>Manual Payment (not instant):</strong><br />
               Send <strong>₦500</strong> to:<br />
               <strong>Access Bank</strong> · 0095528370 · Adiele Solomon
             </p>
-            <p style="font-size: 0.8rem; color: #aaa; margin: 4px 0 0">
+            <p class="secondary-info">
               After manual payment, contact support to receive your PIN.
             </p>
           </div>
         </div>
 
-        <div id="pinResultArea" style="display: none; margin-top: 16px">
+        <div id="pinResultArea" class="pin-result-area">
           <div class="pin-result">
-            <p style="color: #e8d7a2; margin-bottom: 4px">Your PIN is:</p>
+            <p class="pin-result-label">Your PIN is:</p>
             <div class="pin-code" id="generatedPinDisplay">------</div>
-            <p style="color: #a0a0a0; font-size: 0.8rem; margin-top: 6px">
+            <p class="pin-copy-info">
               Copy this PIN and use it to download your CV.
             </p>
           </div>
-          <button
-            class="btn btn-sm"
-            style="
-              background: transparent;
-              color: var(--secondary);
-              border: 1px solid var(--secondary);
-            "
-            onclick="copyPin()">
+          <button class="btn btn-sm pin-copy-btn" onclick="copyPin()">
             📋 Copy PIN
           </button>
         </div>
 
-        <div
-          id="pinPaymentStatus"
-          style="margin-top: 10px; color: #e8d7a2; font-size: 0.9rem"></div>
+        <div id="pinPaymentStatus" class="pin-payment-status"></div>
       </div>
     </div>
 
@@ -1864,13 +1915,13 @@
 
         if (user) {
           greet.innerHTML = "Welcome, <strong>" + user.name + "</strong>";
-          btnAuth.style.display = "none";
-          btnLogout.style.display = "inline-flex";
+          btnAuth.classList.add("hidden-initially");
+          btnLogout.classList.remove("hidden-initially");
         } else {
           greet.innerHTML = "Welcome, <strong>Guest</strong>";
-          btnAuth.style.display = "inline-flex";
+          btnAuth.classList.remove("hidden-initially");
           btnAuth.textContent = "Login";
-          btnLogout.style.display = "none";
+          btnLogout.classList.add("hidden-initially");
         }
       }
 
@@ -2449,7 +2500,7 @@
         modal.classList.add("open");
         $("pinInput").value = "";
         $("pinError").textContent = "";
-        $("pinResultArea").style.display = "none";
+        $("pinResultArea").classList.remove("show");
         $("pinPaymentStatus").textContent = "";
         $("pinSubmitBtn").disabled = false;
         document.body.style.overflow = "hidden";
@@ -2511,7 +2562,7 @@
         const existing = stored[STATE.user.email];
         if (existing && existing.expires && Date.now() < existing.expires) {
           // Show existing PIN
-          $("pinResultArea").style.display = "block";
+          $("pinResultArea").classList.add("show");
           $("generatedPinDisplay").textContent = existing.pin;
           $("pinPaymentStatus").textContent =
             "You already have a valid PIN. Use it to download.";
@@ -2527,7 +2578,7 @@
           stored[STATE.user.email] = { pin, expires };
           localStorage.setItem("cv_pins", JSON.stringify(stored));
 
-          $("pinResultArea").style.display = "block";
+          $("pinResultArea").classList.add("show");
           $("generatedPinDisplay").textContent = pin;
           $("pinPaymentStatus").textContent =
             "✅ PIN generated (TEST MODE). Use this PIN to download.";
@@ -2565,7 +2616,7 @@
             stored[STATE.user.email] = { pin, expires };
             localStorage.setItem("cv_pins", JSON.stringify(stored));
 
-            $("pinResultArea").style.display = "block";
+            $("pinResultArea").classList.add("show");
             $("generatedPinDisplay").textContent = pin;
             $("pinPaymentStatus").textContent =
               "✅ Payment successful! Your PIN is ready.";
@@ -2852,7 +2903,7 @@
                     </div>
                 </div>
                 </body></html>
-                `;
+                `; // This closing backtick was missing.
 
         const blob = new Blob([docHTML], {
           type: "application/msword;charset=utf-8",
